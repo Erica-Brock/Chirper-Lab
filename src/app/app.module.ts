@@ -7,20 +7,23 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { SingleComponent } from './components/single/single.component';
 import { ChirperComponent } from './components/chirper/chirper.component';
+import { Chirp } from './components/chirp';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     SingleComponent,
-    ChirperComponent
+    ChirperComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    Chirp
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

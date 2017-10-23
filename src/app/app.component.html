@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 <div>
     <ul class="chirp-list">
-        <li *ngFor="let chirp of Chirps" (click)="onSelect(chirp)" [class.selected]="chirp===selectedChirp">
+        <li *ngFor="let chirp of chirps" (click)="onSelect(chirp)" [class.selected]="chirp===selectedChirp">
             <span>{{chirp.name}}</span>
             <span>{{chirp.username}}</span>
             <label> </label>
