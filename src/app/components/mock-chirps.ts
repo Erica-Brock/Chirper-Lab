@@ -1,9 +1,10 @@
 import { Chirp } from './chirp'
 
 export const CHIRPS: Chirp[] = [
-    { name: 'Edy', username: '@Edymuse', message: "I am Edy Muse" },
+    { name: 'Eady', username: '@Eadymuse', message: "I am Eady Muse" },
     { name: 'Kiara', username: '@KiKi', message: "I am KiKi" },
     { name: 'Kirsten', username: '@SassyCat', message: "I am SassyCat" },
     { name: 'Tyffani', username: '@WildChild', message: "I am the Wild Child" },
-    { name: 'Brandon', username: '@TheRealJoker', message: "I am the real Joker" },
+    { name: 'Brandon', username: '@TheBadJokes', message: "I am the bad joke maker" },
+    { name: 'Jeff', username: '@Pippin', message: "I am Pippin" },
   ]
