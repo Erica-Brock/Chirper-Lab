@@ -1,26 +1,32 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, OnInit} from '@angular/core';
 import { Chirp } from './components/chirp';
+import {ChirpService} from './components/chirp.service';
 
-const CHIRPS: Chirp[] = [
-  { name: 'Edy', username: '@Edymuse', message: "I am Edy Muse" },
-  { name: 'Kiara', username: '@KiKi', message: "I am KiKi" },
-  { name: 'Kirsten', username: '@SassyCat', message: "I am SassyCat" },
-  { name: 'Tyffani', username: '@WildChild', message: "I am the Wild Child" },
-  { name: 'Brandon', username: '@TheRealJoker', message: "I am the real Joker" },
-]
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ChirpService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Chirper';
-  chirps = CHIRPS;
+  chirps: Chirp[];
   selectedChirp: Chirp;
+  
+  constructor(private chirpService: ChirpService){ }
+  
+  getChirps(): void {
+    this.chirpService.getChirps().then(chirps => this.chirps = chirps);
+  }
+  
+  ngOnInit():void{
+   this.getChirps();
+  }
 
-  onSelect(chirp:Chirp):void{
-    this.selectedChirp= chirp;
+  onSelect(chirp: Chirp):void{
+    this.selectedChirp = chirp;
   }
 }
 

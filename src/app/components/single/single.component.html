@@ -1,8 +1,7 @@
-<div *ngIf= "chirp">
+<div *ngIf="chirp">
   <h1>New Chirp</h1>
   <span>{{chirp.name}}</span>
   <span>{{chirp.username}}</span>
   <label>chirp: </label>
   <input [(ngModel)]="chirp.message" placeholder="chirp">
-  </div>
-
+</div>

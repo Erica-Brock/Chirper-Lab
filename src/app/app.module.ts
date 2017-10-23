@@ -8,6 +8,7 @@ import { ListComponent } from './components/list/list.component';
 import { SingleComponent } from './components/single/single.component';
 import { ChirperComponent } from './components/chirper/chirper.component';
 import { Chirp } from './components/chirp';
+import {ChirpService} from './components/chirp.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Chirp } from './components/chirp';
     FormsModule
   ],
   providers: [
-    Chirp
+    Chirp,
+    ChirpService
   ],
   bootstrap: [AppComponent]
 })
